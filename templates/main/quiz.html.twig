@@ -1,0 +1,236 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Oreo of the Day | Quiz{% endblock %}
+
+{% block body %}
+    {% include 'reusable_templates/header.html.twig' %}
+
+    <main class="quiz">
+        <!-- start:: Intro -->
+        <div class="content page-splash">
+            <div class="inner">
+                <h2>Quiz</h2>
+                <div class="quiz-wrapper">
+                    <div class="question question-1 active">
+                        <div class="question-counter">
+                            <h3>1/7</h3>
+                        </div>
+                        <p>Care este culoarea ta preferată dintre cele de mai jos? </p>
+                        <div class="answers">
+                            <div class="group" data-answer="a">
+                                <span class="light-blue"></span>
+                            </div>
+                            <div class="group" data-answer="c">
+                                <span class="dark-blue"></span>
+                            </div>
+                            <div class="group" data-answer="d">
+                                <span class="yellow"></span>
+                            </div>
+                            <div class="group" data-answer="e">
+                                <span class="brown"></span>
+                            </div>
+                            <div class="group" data-answer="b">
+                                <span class="purple"></span>
+                            </div>
+                        </div>
+                        <a class="btn btn--secondary nextButton" data-question="1" href="#">Pasul următor</a>
+                    </div>
+
+                    <div class="question question-2">
+                        <div class="question-counter">
+                            <h3>2/7</h3>
+                        </div>
+                        <p>Unde ai purta outfiturile create de tine?</p>
+                        <div class="answers">
+                            <div class="group" data-answer="b">
+                                <span></span>
+                                <p>la dans</p>
+                            </div>
+                            <div class="group" data-answer="d">
+                                <span></span>
+                                <p>în oraș</p>
+                            </div>
+                            <div class="group" data-answer="c">
+                                <span></span>
+                                <p>la mall</p>
+                            </div>
+                            <div class="group" data-answer="a">
+                                <span></span>
+                                <p>pe Instagram</p>
+                            </div>
+                            <div class="group" data-answer="e">
+                                <span></span>
+                                <p>la concert</p>
+                            </div>
+                        </div>
+                        <a class="btn btn--secondary nextButton" data-question="2" href="#">Pasul următor</a>
+                    </div>
+
+                    <div class="question question-3">
+                        <div class="question-counter">
+                            <h3>3/7</h3>
+                        </div>
+                        <p>Cel mai important la o piesă vestimentară este...?</p>
+                        <div class="answers">
+                            <div class="group" data-answer="d">
+                                <span></span>
+                                <p>să mă definească</p>
+                            </div>
+                            <div class="group" data-answer="a">
+                                <span></span>
+                                <p>originalitatea</p>
+                            </div>
+                            <div class="group" data-answer="e">
+                                <span></span>
+                                <p>calitatea</p>
+                            </div>
+                            <div class="group" data-answer="b">
+                                <span></span>
+                                <p>versatilitatea</p>
+                            </div>
+                            <div class="group" data-answer="c">
+                                <span></span>
+                                <p>cum stă pe mine</p>
+                            </div>
+                        </div>
+                        <a class="btn btn--secondary nextButton" data-question="3" href="#">Pasul următor</a>
+                    </div>
+
+                    <div class="question question-4">
+                        <div class="question-counter">
+                            <h3>4/7</h3>
+                        </div>
+                        <p>Ce emoji te reprezintă când îți compui un OOTD?</p>
+                        <div class="answers">
+                            <div class="group" data-answer="e">
+                                <img src="{{ asset("images/quiz/emoji-1.png") }}" alt="emoji" />
+                                <span></span>
+                            </div>
+                            <div class="group" data-answer="d">
+                                <img src="{{ asset("images/quiz/emoji-2.png") }}" alt="emoji" />
+                                <span></span>
+                            </div>
+                            <div class="group" data-answer="c">
+                                <img src="{{ asset("images/quiz/emoji-3.png") }}" alt="emoji" />
+                                <span></span>
+                            </div>
+                            <div class="group" data-answer="a">
+                                <img src="{{ asset("images/quiz/emoji-4.png") }}" alt="emoji" />
+                                <span></span>
+                            </div>
+                            <div class="group" data-answer="b">
+                                <img src="{{ asset("images/quiz/emoji-5.png") }}" alt="emoji" />
+                                <span></span>
+                            </div>
+                        </div>
+                        <a class="btn btn--secondary nextButton" data-question="4" href="#">Pasul următor</a>
+                    </div>
+
+                    <div class="question question-5">
+                        <div class="question-counter">
+                            <h3>5/7</h3>
+                        </div>
+                        <p>Ce accesoriu nu poate lipsi dintr-un OOTD playful?</p>
+                        <div class="answers">
+                            <div class="group" data-answer="c">
+                                <span></span>
+                                <img src="{{ asset("images/quiz/sunglasses.png") }}" alt="item" />
+                            </div>
+                            <div class="group" data-answer="e">
+                                <span></span>
+                                <img src="{{ asset("images/quiz/belt.png") }}" alt="item" />
+                            </div>
+                            <div class="group" data-answer="d">
+                                <span></span>
+                                <img src="{{ asset("images/quiz/scarf.png") }}" alt="item" />
+                            </div>
+                            <div class="group" data-answer="a">
+                                <span></span>
+                                <img src="{{ asset("images/quiz/necklace.png") }}" alt="item" />
+                            </div>
+                            <div class="group" data-answer="b">
+                                <span></span>
+                                <img src="{{ asset("images/quiz/purse.png") }}" alt="item" />
+                            </div>
+                        </div>
+                        <a class="btn btn--secondary nextButton" data-question="5" href="#">Pasul următor</a>
+                    </div>
+
+                    <div class="question question-6">
+                        <div class="question-counter">
+                            <h3>6/7</h3>
+                        </div>
+                        <p>Care e materialul tău preferat?</p>
+                        <div class="answers">
+                            <div class="group" data-answer="e">
+                                <span></span>
+                                <p>in</p>
+                            </div>
+                            <div class="group" data-answer="c">
+                                <span></span>
+                                <p>stofă</p>
+                            </div>
+                            <div class="group" data-answer="d">
+                                <span></span>
+                                <p>catifea</p>
+                            </div>
+                            <div class="group" data-answer="b">
+                                <span></span>
+                                <p>mătase</p>
+                            </div>
+                            <div class="group" data-answer="a">
+                                <span></span>
+                                <p>bumbac</p>
+                            </div>
+                        </div>
+                        <a class="btn btn--secondary nextButton" data-question="6" href="#">Pasul următor</a>
+                    </div>
+
+                    <div class="question question-7">
+                        <div class="question-counter">
+                            <h3>7/7</h3>
+                        </div>
+                        <p>Când îți postezi outfitul, ce # folosești?</p>
+                        <div class="answers">
+                            <div class="group" data-answer="c">
+                                <span></span>
+                                <p>#style</p>
+                            </div>
+                            <div class="group" data-answer="a">
+                                <span></span>
+                                <p>#ootd</p>
+                            </div>
+                            <div class="group" data-answer="d">
+                                <span></span>
+                                <p>#fashion</p>
+                            </div>
+                            <div class="group" data-answer="b">
+                                <span></span>
+                                <p>#follow</p>
+                            </div>
+                            <div class="group" data-answer="e">
+                                <span></span>
+                                <p>#iwokeuplikethis</p>
+                            </div>
+                        </div>
+                        <a class="btn btn--secondary finalButton" data-question="7" href="#">Vezi rezultatul</a>
+                    </div>
+
+                    <div class="finalResult">
+                        <img class="image" src="{{ asset("images/quiz/result-a.png") }}" alt="result-img"/>
+                        <div class="share-answer">
+                            <p>Distribuie răspunsul </p>
+                            <a href="#" class="social-share">
+                                <img src="{{ asset("images/logo-fb.svg") }}" alt="logo" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end:: Intro -->
+    </main>
+
+    {% include 'reusable_templates/footer.html.twig' %}
+{% endblock %}

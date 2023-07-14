@@ -1,0 +1,190 @@
+<!-- start:: Header -->
+<header class="header">
+    <div class="inner">
+        <a href="/" data-category="Meniu" data-label="Click - Acasa">
+            <img src="{{ asset("images/logo-oreo.svg") }}" alt="logo" width="180" height="76" />
+        </a>
+
+        <div class="menu">
+            <h2>MENIU</h2>
+            <div id="menu-hamburger" class="menu-wrapper">
+                <input class="checkbox" type="checkbox" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+            </div>
+        </div>
+
+        <nav id="menu" class="active-menu">
+            <div class="menu-content">
+                <a class="active" href="/">Acasă</a>
+                <a href="#" class="open-form" data-category="Meniu" data-label="Click - Inscrie-te">Înscrie-te</a>
+                <a href="{{ path("oreo-walk") }}" data-category="Meniu" data-label="Click -  OREOWALK & FLAVOURS">Oreowalk & Flavours</a>
+                <a href="{{ path("quiz") }}" data-category="Meniu" data-label="Click - QUIZ">Quiz</a>
+                <a href="{{ path("castigatori") }}" data-category="Meniu" data-label="Click - Castigatori">Câștigători</a>
+                <a target="_blank" href="#">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<div class="register-inner">
+    <div class="form-wrapper">
+        <div class="inner">
+            <form id="register-form" autocomplete="off">
+                <h2>Înscrie bonul</h2>
+                <h6>Înscrie mai jos bonul de cumpărături pe care apar biscuiții tăi preferați OREO și hai să construim împreună OREOwalk!</h6>
+                <div class="form-inputs">
+                    <div class="form-group">
+                        <label for="phone">Număr telefon</label>
+                        <input type="text" name="phone" id="phone" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="store">Magazin</label>
+                        <select name="store" id="store" class="form-control">
+                            <option value="" disabled selected hidden>Alege magazinul</option>
+                            <option value="auchan">Auchan</option>
+                            <option value="carrefour">Carrefour</option>
+                            <option value="cora">Cora</option>
+                            <option value="kaufland">Kaufland</option>
+                            <option value="mega">Mega Image</option>
+                            <option value="metro">Metro</option>
+                            <option value="penny">Penny</option>
+                            <option value="profi">Profi</option>
+                            <option value="selgros">Selgros</option>
+                            <option value="altele">Altele</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="receipt">Număr bon fiscal</label>
+                        <div class="receipt-wrapper">
+                            <input type="text" name="receipt" id="receipt" class="form-control" />
+                            <div class="receipt-info">
+                                <img src="{{ asset("images/register/receipt-icon.svg") }}" alt="Receipt info" width="20" height="20" />
+                            </div>
+                            <div class="receipt-modal">
+                                <img src="{{ asset("images/bonuri/Auchan.png") }}" alt="Receipt" width="238" height="485" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Dată bon fiscal</label>
+                        <input type="text" name="date" id="date" class="form-control form-control--date" readonly="readonly" placeholder="ZZ/LL/AAAA" />
+                    </div>
+                </div>
+                <p>Toate câmpurile sunt obligatorii</p>
+                <div class="submit-err"></div>
+                <div class="form-checkboxes">
+                    <div class="form-check">
+                        <input type="checkbox" name="age" id="age" />
+                        <label for="age" class="checkbox-wrapper">
+                            <span class="checkbox"></span>
+                            <span>Declar că am peste 18 ani</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="terms" id="terms" />
+                        <label for="terms" class="checkbox-wrapper">
+                            <span class="checkbox"></span>
+                            <span>Am citit și sunt de acord cu <a href="{{ path("terms") }}">Termenii și condițiile</a></span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="rules" id="rules" />
+                        <label for="rules" class="checkbox-wrapper">
+                            <span class="checkbox"></span>
+                            <span>Am citit și sunt de acord cu <a href="{{ path("regulament") }}">Regulamentul</a> campaniei promoționale</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group-recaptcha">
+                    <div class="g-recaptcha" data-sitekey="6Lcm1x0nAAAAAFP6ILw-2GEbY5SnBQQuE8VNLwOJ"></div>
+                </div>
+                <div class="btn-wrapper form-action">
+                    <input type="submit" value="Trimite bon" id="form-submit" class="btn btn--primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="inner modal__body">
+            <div class="modal-content-wrapper">
+                <h2>Felicitări!</h2>
+                <h6>
+                    Te-ai înscris cu succes în campania "Oreo of the Day". Îți reamintim că, pentru mai multe șanse de câștig, poți înregistra până la 10 bonuri
+                    fiscale pe săptămână. Și nu uita să păstrezi pentru validare bonul fiscal! Succes!
+                </h6>
+            </div>
+            <div class="btn-wrapper register-again">
+                <a href="#" class="btn btn--primary register-new">Înscrie bon nou</a>
+            </div>
+            <div class="btn-wrapper">
+                <a href="/" class="btn btn--icon">
+                    Înapoi la site
+                    <img src="{{ asset("images/register/back-home-icon.svg") }}" alt="Back home icon" width="12" height="12" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="close-menu">
+        <div class="inner">
+            <span>Închide</span>
+            <button class="close-form"></button>
+        </div>
+    </div>
+</div>
+
+<div class="page-modal pre-post-modal">
+    <div class="inner page-modal__header">
+        <div class="close-modal">
+            <span>Închide</span>
+            <button></button>
+        </div>
+    </div>
+    <div class="page-modal__content">
+        <div class="logo-wrapper">
+            <img src="{{ asset("images/modal/ootd.svg") }}" alt="" class="logo" width="220" height="103">
+        </div>
+        <div class="content-wrapper">
+            <div class="text-wrapper">
+                <p>Campania <strong>"Oreo of the Day"</strong> nu a început încă. Mai ai un picuț de răbdare. Ca să te
+                    înscrii la
+                    concurs, trebuie să cumperi produse Oreo în valoare de minimum 9 lei, pe același bon fiscal, în
+                    perioada <strong>19.05.2023 - 29.06.2023</strong>, și să înscrii numărul bonului pe <a target="_blank" href="https://www.oreopromo.ro">www.oreopromo.ro</a>.</p>
+            </div>
+            <div class="btn-wrapper">
+                <a href="/">
+                    ÎNAPOI LA SITE
+                    <img src="{{ asset("images/modal/back-home-icon.svg") }}" alt="Back home icon" width="12" height="12">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-modal page-modal--prize">
+    <div class="inner page-modal__header">
+        <div class="close-modal">
+            <span>Închide</span>
+            <button></button>
+        </div>
+    </div>
+    <div class="page-modal__content">
+        <div class="logo-wrapper">
+            <img src="{{ asset("images/modal/ootd.svg") }}" alt="" class="logo" width="220" height="103">
+        </div>
+        <div class="content-wrapper">
+            <h2>Felicitări!</h2>
+            <p>Ai câștigat un <strong>voucher Fashion Days în valoare de 300 RON</strong> ca să-ți faci cele mai jucăușe
+                <strong>#OOTD-uri</strong>. Păstrează bonul fiscal, te vom contacta în curând. Înscrie și alte bonuri
+                fiscale, pentru șanse la premiul cel mare. Ai dreptul la cel mult zece înscrieri în fiecare săptămână de
+                campanie.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- end:: Header -->
